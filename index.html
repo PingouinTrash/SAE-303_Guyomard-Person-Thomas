@@ -82,13 +82,15 @@
             <div class="container" id="dataviz">
                 <canvas id="chart2">
                 </canvas>
-                <p>Oe oe oe du texte du texte du texte. "At vero eos et accusamus et iusto 
+                <p class="text is-5">Peut être ici expliquer tout ce qui est calculs/moyennes/etc et citer les sources. "At vero eos et accusamus et iusto 
                     odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti 
                     atque corrupti quos dolores et quas molestias excepturi sint occaecati 
                     cupiditate non provident, similique sunt in culpa qui officia deserunt 
                     mollitia animi, id est laborum et dolorum fuga. 
                     Itaque earum rerum hic tenetur a sapiente delectus asperiores repellat."
                 </p>
+                <canvas id="chart3">
+                </canvas>
             </div>
         </main>
         <footer class="footer">
@@ -102,16 +104,16 @@
 
     <script>
     let data = [2,3,5]; 
-    let labels = ["nucléaire","renouvelables","non renouvelables"];
+    let labels = ["Énergie nucléaire","Énergies renouvelables","Énergies non renouvelables"];
 
-    let ctx = document.getElementById('chart2');
-    new Chart(ctx, { 
+    let ctx2 = document.getElementById('chart2');
+    new Chart(ctx2, { 
     type: 'pie', 
     data: { 
   labels: [
-    'nucléaire',
-    'renouvelables',
-    'non renouvelables'
+    'Énergie nucléaire',
+    'Énergies renouvelables',
+    'Énergies non renouvelables'
   ],
   datasets: [{
     label: 'Part dans la consommation énergétique mondiale',
@@ -124,6 +126,28 @@
     hoverOffset: 4
   }]
 } } );
+
+
+let labels3 = [1980, 1981, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023]
+let data3= [[1980, 1981, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989,
+  1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999,
+  2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009,
+  2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019,
+  2020, 2021, 2022, 2023]]
+let ctx3 = document.getElementById('chart3');
+    new Chart(ctx3, { 
+        type: 'line', 
+        data: { 
+            labels:labels3, 
+            datasets:
+            [{ 
+                label: 'data3', 
+                data:data3, 
+                fill:true, 
+                pointRadius:0 
+                }] 
+                } 
+                });
 </script>
 
 </html>
