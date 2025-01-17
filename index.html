@@ -12,6 +12,7 @@
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
             integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
             crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     </head>
 
     <body>
@@ -34,8 +35,13 @@
                 <div class="column">
                     <h1 class="title is-1">Le Titre Lorem Ipsum Dolor Sit
                         Amet</h1>
-                    <p class="is-size-5">Lorem Ipsum dolor sit amet, set consecitur dolor
-                        semet it. Su Domor sil amet. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium, dolor dolor apai lor gnan poloir !</p>
+                    <p class="is-size-5">À l’heure de la transition énergétique,
+                        le renouvelable semble être la solution pour s’émanciper
+                        des énergies fossiles. Mais qu’en est-il du nucléaire ?
+                        Souvent critiqué, c’est pourtant une énergie qui émet
+                        peu de GES, et permet une production qui est pilotable,
+                        contrairement aux énergies renouvelables, soumises aux
+                        éléments pour en produire.</p>
                 </div>
                 <div class="column">
                     <img src="img/test.png" class="image" alt>
@@ -43,7 +49,8 @@
             </div>
             <div class="columns" id="text">
                 <div class="column">
-                    <p class="is-size-5">"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"</p>
+                    <p
+                        class="is-size-5">"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"</p>
                 </div>
                 <div class="column">
                     <p class="is-size-5">
@@ -53,7 +60,7 @@
             </div>
             <div class="columns">
                 <div class="column">
-                    <img src="img/test.png" class="image" alt="">
+                    <img src="img/test.png" class="image" alt>
                 </div>
                 <div class="column">
                     <h1 class="title is-2">Lorem Ipsum Dolor Sit
@@ -70,7 +77,7 @@
             <p>Oe oe oe du texte du texte du texte</p>
 
             <h2 class="title is-2" id="dataviz2">Dataviz 2</h2>
-            <canvas id="chart">
+            <canvas id="chart2">
             </canvas>
             <p>Oe oe oe du texte du texte du texte</p>
         </main>
@@ -84,18 +91,29 @@
     </body>
 
     <script>
-        let data=[];
+    let data = [2,3,5]; 
+    let labels = ["nucléaire","renouvelables","non renouvelables"];
 
-    let ctx = document.getElementById('chart');
-    new Chart(ctx, {
-        type: '',
-        data: {
-            datasets: [{
-                label: 'data',
-                data: data,
-            }]
-        },
-    });
+    let ctx = document.getElementById('chart2');
+    new Chart(ctx, { 
+    type: 'pie', 
+    data: { 
+  labels: [
+    'nucléaire',
+    'renouvelables',
+    'non renouvelables'
+  ],
+  datasets: [{
+    label: 'Part dans la consommation énergétique mondiale',
+    data: [2, 3, 5],
+    backgroundColor: [
+      'yellow',
+      'green',
+      'non renouvelables'
+    ],
+    hoverOffset: 4
+  }]
+} } );
 </script>
 
 </html>
