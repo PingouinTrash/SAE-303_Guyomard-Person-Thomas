@@ -3,7 +3,7 @@ for (let year = 1965; year <= 2023; year++) {
     years.push(year);
 }
 
-// Données de ourworldindata.org
+// Données de ourworldindata.org pour la dataviz n°1
 
 let nuclearEnergyTWh = [
     25.539724, 34.43329, 41.006016, 52.113163, 61.783413, 78.87466, 109.70418,
@@ -53,3 +53,9 @@ let fossilFuelTWhBis2 = [
     13405.4, 14345.73, 14952.61, 15362.46, 15681.07, 15965.13, 15953.64, 16233.18, 
     16574.46, 17094.0, 17006.52, 16522.65, 17480.51, 17719.19, 17879.41
 ];
+
+// Données de ourworldindata.org pour la dataviz n°2
+
+let deathRate = [24.6, 18.4, 2.8, 4.6, 1.3, 0.04, 0.03, 0.02];
+
+let greenhouseGasEmission = [970, 920, 440, 230, 24, 11, 6, 53];
