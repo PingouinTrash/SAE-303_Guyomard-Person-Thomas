@@ -77,11 +77,10 @@
                 </canvas>
                 <p is-5 mt-3>Oe oe oe du texte du texte du texte</p>
             </div>
-            <h2 class="title is-2 mt-6" id="dataviz2">Répartition des énergies
-                dans la consommation énergétique mondiale</h2>
+            <h2 class="title is-2 mt-6" id="dataviz2">Dataviz 2</h2>
             <div class="container" id="dataviz">
-                <!-- <canvas id="chart2">
-                </canvas> -->
+                <canvas id="chart2">
+                </canvas>
             </div>
             <p class="text is-5 mt-3">Peut être ici expliquer tout ce qui est
                 calculs/moyennes/etc et citer les sources. "At vero eos et
@@ -192,7 +191,18 @@ new Chart(ctx, {
     } 
 });
 
+let ctx2 = document.getElementById('chart2');
 
+new Chart(ctx2, {
+    type:'polarArea', 
+    data:{ 
+        labels: ['Énergie nucléaire', 'Énergies fossiles', 'Énergies renouvelables'], 
+        datasets:[{ 
+            label:"My first dataset", 
+            data:[2, 15, 4],
+        },] 
+    } 
+});
 
 </script>
 
