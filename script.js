@@ -59,5 +59,3 @@ let fossilFuelTWhBis2 = [
 let deathRate = [24.6, 18.4, 2.8, 4.6, 1.3, 0.04, 0.03, 0.02];
 
 let greenhouseGasEmission = [970, 920, 440, 230, 24, 11, 6, 53];
-
-export * from "datascript";
