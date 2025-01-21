@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <header>
+    <header class="mb-6">
         <nav class="navbar has-background-light p-3">
             <div class="navbar-brand">
                 <span class="icon">
@@ -26,6 +26,7 @@
                 <a href="#text" class="button is-light">Contenu</a>
                 <a href="#dataviz1" class="button is-light">Dataviz 1</a>
                 <a href="#dataviz2" class="button is-light">Dataviz 2</a>
+                <a href="#poster" class="button is-light">Poster Datalogy</a>
             </div>
         </nav>
     </header>
@@ -45,12 +46,6 @@
             <div class="column">
                 <img src="img/test.png" class="image" alt>
             </div>
-        </div>
-        <div class="navbar-end">
-            <a href="#text" class="button is-light">Contenu</a>
-            <a href="#dataviz1" class="button is-light">Dataviz 1</a>
-            <a href="#dataviz2" class="button is-light">Dataviz 2</a>
-            <a href="#poster" class="button is-light">Poster Datalogy</a>
         </div>
         <div class="columns is-8">
             <div class="column">
@@ -117,8 +112,7 @@
                 </p>
             </div>
         </div>
-        <h2 class="title is-2 mt-6" id="dataviz1">Production d’énergie (électricité) pour le nucléaire de 1965 à 2023,
-            comparée à celle des énergies fossiles et des énergies renouvelables.</h2>
+        <h2 class="title is-2 mt-6" id="dataviz1">Production d'élécrticité par sources d'énergies, de 1965 à 2023</h2>
         <div class="container" id="dataviz">
             <canvas id="chart1">
             </canvas>
@@ -152,8 +146,7 @@
             </ul>
             </p>
         </div>
-        <h2 class="title is-2 mt-6" id="dataviz2">Répartition des énergies
-            dans la consommation énergétique mondiale</h2>
+        <h2 class="title is-2 mt-6" id="dataviz2">Les sources d'énergies les plus sûres et les plus propres</h2>
         <div class="container" id="dataviz">
             <canvas id="chart2">
             </canvas>
@@ -301,7 +294,6 @@
                 r: {
                     ticks: {
                         callback: function (value, index, values) {
-                            //make the scale logarithmic
                             return Math.round(Math.pow(2, value));
                         },
                     }
@@ -311,7 +303,6 @@
                 tooltip: {
                     callbacks: {
                         label: function (context) {
-                            //get the correct label (non logarithmic) back
                             let value = context.dataset.data[context.dataIndex]
                             return Math.pow(2, value).toFixed(2);;
                         }
