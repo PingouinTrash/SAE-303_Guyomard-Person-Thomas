@@ -1,56 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 
-        <link rel="stylesheet" href="/css/style.css">
-        <link rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
-        <link rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-            integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-            crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    </head>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
 
-    <body>
-        <header>
-            <nav class="navbar has-background-light p-3">
-                <div class="navbar-brand">
-                    <span class="icon">
-                        <i class></i>
-                    </span>
-                </div>
-                <div class="navbar-end">
-                    <a href="#text" class="button is-light">Contenu</a>
-                    <a href="#dataviz1" class="button is-light">Dataviz 1</a>
-                    <a href="#dataviz2" class="button is-light">Dataviz 2</a>
-                </div>
-            </nav>
-        </header>
-        <main class="m-6">
-            <div class="columns is-8">
-                <div class="column">
-                    <h1 class="title is-1">Le Titre Lorem Ipsum Dolor Sit
-                        Amet</h1>
-                    <p class="is-size-5">À l’heure de la transition énergétique,
-                        le renouvelable semble être la solution pour s’émanciper
-                        des énergies fossiles. Mais qu’en est-il du nucléaire ?
-                        Souvent critiqué, c’est pourtant une énergie qui émet
-                        peu de GES, et permet une production qui est pilotable,
-                        contrairement aux énergies renouvelables, soumises aux
-                        éléments pour en produire.</p>
-                </div>
-                <div class="column">
-                    <img src="img/test.png" class="image" alt>
-                </div>
+<body>
+    <header>
+        <nav class="navbar has-background-light p-3">
+            <div class="navbar-brand">
+                <span class="icon">
+                    <i class></i>
+                </span>
+            </div>
+            <div class="navbar-end">
+                <a href="#text" class="button is-light">Contenu</a>
+                <a href="#dataviz1" class="button is-light">Dataviz 1</a>
+                <a href="#dataviz2" class="button is-light">Dataviz 2</a>
             </div>
         </nav>
     </header>
     <main class="m-6">
+        <div class="columns is-8">
+            <div class="column">
+                <h1 class="title is-1">Le Titre Lorem Ipsum Dolor Sit
+                    Amet</h1>
+                <p class="is-size-5">À l’heure de la transition énergétique,
+                    le renouvelable semble être la solution pour s’émanciper
+                    des énergies fossiles. Mais qu’en est-il du nucléaire ?
+                    Souvent critiqué, c’est pourtant une énergie qui émet
+                    peu de GES, et permet une production qui est pilotable,
+                    contrairement aux énergies renouvelables, soumises aux
+                    éléments pour en produire.</p>
+            </div>
+            <div class="column">
+                <img src="img/test.png" class="image" alt>
+            </div>
+        </div>
+        <div class="navbar-end">
+            <a href="#text" class="button is-light">Contenu</a>
+            <a href="#dataviz1" class="button is-light">Dataviz 1</a>
+            <a href="#dataviz2" class="button is-light">Dataviz 2</a>
+            <a href="#poster" class="button is-light">Poster Datalogy</a>
+        </div>
         <div class="columns is-8">
             <div class="column">
                 <h1 class="title is-1">Production d'énergie nucléaire</h1>
@@ -121,29 +122,35 @@
         <div class="container" id="dataviz">
             <canvas id="chart1">
             </canvas>
-            <p is-5 mt-3>Production d'énergie mesurée en terawatts-heures</p> 
-                <p>Sources : 
-                    <ul>
-                        <li>
-                            <a href="https://ourworldindata.org/grapher/nuclear-energy-generation?tab=chart&country=~OWID_WRL">Nuclear power generation - Our World in Data</a>
-                        </li>
-                        <li>
-                            <a href="https://ourworldindata.org/grapher/modern-renewable-energy-consumption">Renewable electricity generation - Our World in Data </a>
-                        </li>
-                        <li>
-                            <a href="https://ourworldindata.org/grapher/modern-renewable-prod">Modern renewable energy generation by source - Our World in Data</a>
-                        </li>
-                        <li>
-                            <a href="https://ourworldindata.org/grapher/elec-fossil-nuclear-renewables">Electricity production from fossil fuels, nuclear and renewables - Our World in Data</a>
-                        </li>
-                        <li>
-                            <a href="https://ourworldindata.org/grapher/electricity-prod-source-stacked">Electricity production by source, World </a>
-                        </li>
-                        <li>
-                            <a href="https://visualizingenergy.org/world-electricity-generation-since-1900/">World electricity generation since 1900 - Visualizing Energy</a>
-                        </li>    
-                    </ul>
-                </p>
+            <p is-5 mt-3>Production d'énergie mesurée en terawatts-heures</p>
+            <p>Sources :
+            <ul>
+                <li>
+                    <a href="https://ourworldindata.org/grapher/nuclear-energy-generation?tab=chart&country=~OWID_WRL">Nuclear
+                        power generation - Our World in Data</a>
+                </li>
+                <li>
+                    <a href="https://ourworldindata.org/grapher/modern-renewable-energy-consumption">Renewable
+                        electricity generation - Our World in Data </a>
+                </li>
+                <li>
+                    <a href="https://ourworldindata.org/grapher/modern-renewable-prod">Modern renewable energy
+                        generation by source - Our World in Data</a>
+                </li>
+                <li>
+                    <a href="https://ourworldindata.org/grapher/elec-fossil-nuclear-renewables">Electricity production
+                        from fossil fuels, nuclear and renewables - Our World in Data</a>
+                </li>
+                <li>
+                    <a href="https://ourworldindata.org/grapher/electricity-prod-source-stacked">Electricity production
+                        by source, World </a>
+                </li>
+                <li>
+                    <a href="https://visualizingenergy.org/world-electricity-generation-since-1900/">World electricity
+                        generation since 1900 - Visualizing Energy</a>
+                </li>
+            </ul>
+            </p>
         </div>
         <h2 class="title is-2 mt-6" id="dataviz2">Répartition des énergies
             dans la consommation énergétique mondiale</h2>
@@ -187,7 +194,7 @@
     </footer>
 </body>
 
-        <script>
+<script>
 
     // Premier dataset ----------------------------------------------------------------
 
@@ -327,4 +334,4 @@
 
 </script>
 
-    </html>
+</html>
