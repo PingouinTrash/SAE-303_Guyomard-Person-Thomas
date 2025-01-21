@@ -132,6 +132,8 @@
 
 <script>
 
+    // Premier dataset ----------------------------------------------------------------
+
     let years = [];
     for (let year = 1965; year <= 2023; year++) {
         years.push(year);
@@ -170,13 +172,9 @@
         17480.51, 17719.19, 17879.41
     ];
 
-    let deathRate = [24.6, 18.4, 2.8, 4.6, 1.3, 0.04, 0.03, 0.02];
+    // Première dataviz ----------------------------------------------------------------
 
-    let greenhouseGasEmission = [970, 920, 440, 230, 24, 11, 6, 53];
-
-    console.log(nuclearEnergyTWh)
     let ctx1 = document.getElementById('chart1');
-    let ctx2 = document.getElementById('chart2');
 
     new Chart(ctx1, {
         type: 'line',
@@ -203,17 +201,72 @@
         }
     });
 
-    new Chart(ctx2,{
-            type: "polarArea",
-            data: chartData,
-            options: {
-                elements: {
-                    arc: {
-                        angle: [90, 120, 20, 20]
+    // Second dataset ----------------------------------------------------------------
+
+    let deathRate = [24.6, 18.4, 2.8, 4.6, 1.3, 0.04, 0.03, 0.02];
+    dataset1 = deathRate.map(elt => Math.log(elt) / Math.log(2));
+
+    let greenhouseGasEmission = [970, 920, 440, 230, 24, 11, 6, 53];
+    dataset2 = greenhouseGasEmission.map(elt => Math.log(elt) / Math.log(2));
+
+    let chartData = {
+        labels: [
+            'Charbon',
+            'Pétrole',
+            'Gas naturel',
+            'Biomasse',
+            'Hydroélectrique',
+            'Eolien',
+            'Nucléaire',
+            'Solaire'
+        ],
+        // datasets: [{
+        //     label: 'Nombre de morts',
+        //     data: dataset1
+        // }]
+        datasets: [{
+            label: 'Emission de gaz à effet de serre',
+            data: dataset2
+        }]
+    };
+
+    // Seconde dataviz ----------------------------------------------------------------
+
+    let ctx2 = document.getElementById('chart2');
+
+    new Chart(ctx2, {
+        type: "polarArea",
+        data: chartData,
+        options: {
+            elements: {
+                arc: {
+                    angle: [129.96, 10.76, 83.12, 8.57, 54.79, 23.80, 35.46, 13.64]
+                }
+            },
+            scales: {
+                r: {
+                    ticks: {
+                        callback: function (value, index, values) {
+                            //make the scale logarithmic
+                            return Math.round(Math.pow(2, value));
+                        },
                     }
                 }
+            },
+            plugins: {
+                tooltip: {
+                    callbacks: {
+                        label: function (context) {
+                            //get the correct label (non logarithmic) back
+                            let value = context.dataset.data[context.dataIndex]
+                            return Math.pow(2, value).toFixed(2);;
+                        }
+                    }
+                }
+
             }
-        });
+        }
+    });
 
 </script>
 
