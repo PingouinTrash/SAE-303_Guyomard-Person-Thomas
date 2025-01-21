@@ -31,7 +31,7 @@
         </nav>
     </header>
     <main class="m-6">
-        <div class="columns is-2">
+        <div class="columns is-2 mt-6" id="text">
             <div class="column">
                 <h1 class="title is-1">Production d'énergie nucléaire</h1>
                 <p class="is-size-5">À l’heure de la transition énergétique,
@@ -46,16 +46,25 @@
                 <img src="img/iStock-2095181304.jpg" class="image" alt>
             </div>
         </div>
-        <div class="columns is-1">
+        <div class="columns is-1 mt-6">
             <p class="is-size-5">
-                Alors que le monde tente de faire évoluer ses systèmes énergétiques en abandonnant les combustibles fossiles au profit de sources d’énergie à faible émission de carbone, nous disposons d’un éventail d’options énergétiques : les technologies d’énergies renouvelables telles que l’hydroélectricité, l’éolien et le solaire, ainsi que l’énergie nucléaire. L’énergie nucléaire et les technologies renouvelables émettent généralement très peu de CO2 par unité de production d’énergie et sont également bien plus efficaces que les combustibles fossiles pour limiter la pollution atmosphérique locale.
+                Alors que le monde tente de faire évoluer ses systèmes énergétiques en abandonnant les combustibles
+                fossiles au profit de sources d’énergie à faible émission de carbone, nous disposons d’un éventail
+                d’options énergétiques : les technologies d’énergies renouvelables telles que l’hydroélectricité,
+                l’éolien et le solaire, ainsi que l’énergie nucléaire. L’énergie nucléaire et les technologies
+                renouvelables émettent généralement très peu de CO2 par unité de production d’énergie et sont également
+                bien plus efficaces que les combustibles fossiles pour limiter la pollution atmosphérique locale.
                 <br><br>
-                Cependant, alors que certains pays investissent massivement pour accroître leur approvisionnement en énergie nucléaire, d'autres ferment leurs centrales. Le rôle de l'énergie nucléaire dans le système énergétique est donc très spécifique à chaque pays.
+                Cependant, alors que certains pays investissent massivement pour accroître leur approvisionnement en
+                énergie nucléaire, d'autres ferment leurs centrales. Le rôle de l'énergie nucléaire dans le système
+                énergétique est donc très spécifique à chaque pays.
                 <br><br>
-                Quelle part de notre énergie provient de l'énergie nucléaire ? Comment son rôle évolue-t-il au fil du temps ? Dans cet article, nous examinons les niveaux et l'évolution de la production d'énergie nucléaire dans le monde, ainsi que son bilan en matière de sécurité par rapport aux autres sources d'énergie.
+                Quelle part de notre énergie provient de l'énergie nucléaire ? Comment son rôle évolue-t-il au fil du
+                temps ? Dans cet article, nous examinons les niveaux et l'évolution de la production d'énergie nucléaire
+                dans le monde, ainsi que son bilan en matière de sécurité par rapport aux autres sources d'énergie.
             </p>
         </div>
-        <div class="columns is-2">
+        <div class="columns is-2 mt-6">
             <div class="column">
                 <img src="img/iStock-1481622983.jpg" class="image" alt>
             </div>
@@ -224,26 +233,7 @@
     let greenhouseGasEmission = [970, 920, 440, 230, 24, 11, 6, 53];
     dataset2 = greenhouseGasEmission.map(elt => Math.log(elt) / Math.log(2));
 
-    let chartData = {
-        labels: [
-            'Charbon',
-            'Pétrole',
-            'Gas naturel',
-            'Biomasse',
-            'Hydroélectrique',
-            'Eolien',
-            'Nucléaire',
-            'Solaire'
-        ],
-        datasets: [{
-            label: 'Nombre de morts',
-            data: dataset1
-        }]
-        // datasets: [{
-        //     label: 'Emission de gaz à effet de serre',
-        //     data: dataset2
-        // }]
-    };
+    const DATASETS = [dataset1, dataset2];
 
     // Seconde dataviz ----------------------------------------------------------------
 
@@ -251,13 +241,27 @@
 
     new Chart(ctx2, {
         type: "polarArea",
-        data: chartData,
+        data: {
+            labels: [
+                'Charbon',
+                'Pétrole',
+                'Gas naturel',
+                'Biomasse',
+                'Hydroélectrique',
+                'Eolien',
+                'Nucléaire',
+                'Solaire'
+            ],
+            datasets : [{
+                data : DATASETS[1]
+            }]
+        },
         options: {
-            // elements: {
-            //     arc: {
-            //         angle: [129.96, 10.76, 83.12, 8.57, 54.79, 23.80, 35.46, 13.64]
-            //     }
-            // },
+            elements: {
+                arc: {
+                    angle: [129.96, 10.76, 83.12, 8.57, 54.79, 23.80, 35.46, 13.64]
+                }
+            },
             scales: {
                 r: {
                     ticks: {
