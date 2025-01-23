@@ -32,130 +32,114 @@
             </div>
         </nav>
     </header>
-    <main class="m-6">
-        <div class="columns is-2 mt-6">
-            <div class="column">
-                <h1 class="title is-1" id="text">La production d'énergie nucléaire dans le monde</h1>
-                <p class="is-size-5">
-                    À l’heure de la transition énergétique, le renouvelable semble être la solution pour s’émanciper des
-                    énergies fossiles. Mais qu’en est-il du nucléaire ? Souvent critiqué, c’est pourtant une énergie qui
-                    émet peu de GES, et permet une production qui est pilotable, contrairement aux énergies
-                    renouvelables, soumises auxéléments pour en produire.
-                </p>
-            </div>
-            <div class="column">
-                <img src="img/iStock-2095181304.jpg" class="image" alt>
-            </div>
-        </div>
-        <div class="columns is-1 mt-6">
-            <p class="is-size-5">
-                Alors que le monde tente de faire évoluer ses systèmes énergétiques en abandonnant les combustibles
-                fossiles au profit de sources d’énergie à faible émission de carbone, nous disposons d’un éventail
-                d’options énergétiques : les technologies d’énergies renouvelables telles que l’hydroélectricité,
-                l’éolien et le solaire, ainsi que l’énergie nucléaire. L’énergie nucléaire et les technologies
-                renouvelables émettent généralement très peu de CO2 par unité de production d’énergie et sont également
-                bien plus efficaces que les combustibles fossiles pour limiter la pollution atmosphérique locale.
-                <br><br>
-                Cependant, alors que certains pays investissent massivement pour accroître leur approvisionnement en
-                énergie nucléaire, d'autres ferment leurs centrales. Le rôle de l'énergie nucléaire dans le système
-                énergétique est donc très spécifique à chaque pays.
-                <br><br>
-                Quelle part de notre énergie provient de l'énergie nucléaire ? Comment son rôle évolue-t-il au fil du
-                temps ? Dans cet article, nous examinons les niveaux et l'évolution de la production d'énergie nucléaire
-                dans le monde, ainsi que son bilan en matière de sécurité par rapport aux autres sources d'énergie.
-            </p>
-        </div>
-        <div class="columns is-2 mt-6">
-            <div class="column">
-                <img src="img/iStock-1481622983.jpg" class="image" alt>
-            </div>
-            <div class="column">
-                <h1 class="title is-2">Production mondiale d'énergie nucléaire</h1>
-                <p class="is-size-5">
-                    L’énergie nucléaire – avec l’hydroélectricité – est l’une de nos plus anciennes technologies
-                    énergétiques à faible émission de carbone. La production d'énergie nucléaire existe depuis les
-                    années 1960, mais a connu une croissance massive à l'échelle mondiale dans les années 1970, 1980 et
-                    1990. Le graphique interactif montre l'évolution de la production nucléaire mondiale au cours du
-                    dernier demi-siècle. Après une croissance rapide dans les années 1970 à 1990,la production mondiale
-                    d’électricité a considérablement ralenti. En fait, nous avons constaté une forte baisse de la
-                    production nucléaire après le tsunami de Fukushima au Japon en 2011 [nous examinons les conséquences
-                    de cette catastrophe plus loin dans cet article] , les pays ayant mis hors service des centrales
-                    pour des raisons de sécurité. Mais nous constatons également que la production a à nouveau augmenté
-                    ces dernières années.
-                </p>
-            </div>
-        </div>
-        <h2 class="title is-2 mt-6">Production d'électricité par sources d'énergies, de 1965 à 2023</h2>
-        <div class="container" id="dataviz1">
-            <canvas id="chart1">
-            </canvas>
-            <p class="mt-2 mb-2">* Production d'énergie mesurée enterawatts-heures</p>
-            <p>Sources :
-            <ul>
-                <li>
-                    <a href="https://ourworldindata.org/grapher/nuclear-energy-generation?tab=chart&country=~OWID_WRL">Nuclear
-                        power generation - Our World in Data</a>
-                </li>
-                <li>
-                    <a href="https://ourworldindata.org/grapher/modern-renewable-energy-consumption">Renewable
-                        electricity generation - Our World in Data </a>
-                </li>
-                <li>
-                    <a href="https://ourworldindata.org/grapher/modern-renewable-prod">Modern renewable energy
-                        generation by source - Our World in Data</a>
-                </li>
-                <li>
-                    <a href="https://ourworldindata.org/grapher/elec-fossil-nuclear-renewables">Electricity production
-                        from fossil fuels, nuclear and renewables - Our World in Data</a>
-                </li>
-                <li>
-                    <a href="https://ourworldindata.org/grapher/electricity-prod-source-stacked">Electricity production
-                        by source, World </a>
-                </li>
-                <li>
-                    <a href="https://visualizingenergy.org/world-electricity-generation-since-1900/">World electricity
-                        generation since 1900 - Visualizing Energy</a>
-                </li>
-            </ul>
-            </p>
-        </div>
-        <div class="columns is-1 mt-6">
-            <p class="is-size-5">
-                On constate en observant ce premier graphique que la production d’électricité à partir d’énergies
-                fossiles et renouvelables n’a cessé d’augmenter au fil des années, tandis que la production
-                d’électricité issue de l’énergie nucléaire stagne depuis maintenant plus de trente ans. On peut se
-                demander si cette utilisation toujours plus conséquente d’énergie fossile comparée au nucléaire est
-                justifiable d’un point de vue écologique et en terme de sûreté. Le graphique suivant aura ainsi pour
-                objectif d’éclaircir cette question, en analysant la sûreté et la propreté des différentes énergies.
-            </p>
-        </div>
-        <h2 class="title is-2 mt-6">Les sources d'énergies les plus sûres et les plus propres</h2>
-        <div class="columns is-2 mt-6">
-            <div class="column mr-6" id="dataviz2">
-                <h3 class="title is-3">Taux de mortalité</h3>
-                <canvas id="chart2A">
-                </canvas>
-                <p class="mt-2 mb-2">* Nombre de morts estimé pour la production d'un térawattheure</p>
-                <div class="select" name="datasets">
-                    <select id="data-select-A">
-                        <option value="0">Infographie complète</option>
-                        <option value="1">Infographie simplifiée</option>
-                    </select>
+    <main class="columns">
+        <div class="column"></div>
+        <div class="column is-two-thirds">
+            <div class="columns is-2 mt-6">
+                <div class="column">
+                    <h1 class="title is-1" id="text">La production d'énergie nucléaire dans le monde</h1>
+                    <p class="is-size-5">
+                        À l’heure de la transition énergétique, le renouvelable semble être la solution pour s’émanciper des
+                        énergies fossiles. Mais qu’en est-il du nucléaire ? Souvent critiqué, c’est pourtant une énergie qui
+                        émet peu de GES, et permet une production qui est pilotable, contrairement aux énergies
+                        renouvelables, soumises auxéléments pour en produire.
+                    </p>
+                </div>
+                <div class="column">
+                    <img src="img/iStock-2095181304.jpg" class="image" alt>
                 </div>
             </div>
-            <div class="column" id="dataviz3">
-                <h3 class="title is-3">Emissions de gaz à effet de serre</h3>
-                <canvas id="chart2B">
+            <div class="columns is-1 mt-6">
+                <p class="is-size-5">
+                    Alors que le monde tente de faire évoluer ses systèmes énergétiques en abandonnant les combustibles
+                    fossiles au profit de sources d’énergie à faible émission de carbone, nous disposons d’un éventail
+                    d’options énergétiques : les technologies d’énergies renouvelables telles que l’hydroélectricité,
+                    l’éolien et le solaire, ainsi que l’énergie nucléaire. L’énergie nucléaire et les technologies
+                    renouvelables émettent généralement très peu de CO2 par unité de production d’énergie et sont également
+                    bien plus efficaces que les combustibles fossiles pour limiter la pollution atmosphérique locale.
+                    <br><br>
+                    Cependant, alors que certains pays investissent massivement pour accroître leur approvisionnement en
+                    énergie nucléaire, d'autres ferment leurs centrales. Le rôle de l'énergie nucléaire dans le système
+                    énergétique est donc très spécifique à chaque pays.
+                    <br><br>
+                    Quelle part de notre énergie provient de l'énergie nucléaire ? Comment son rôle évolue-t-il au fil du
+                    temps ? Dans cet article, nous examinons les niveaux et l'évolution de la production d'énergie nucléaire
+                    dans le monde, ainsi que son bilan en matière de sécurité par rapport aux autres sources d'énergie.
+                </p>
+            </div>
+            <div class="columns is-2 mt-6">
+                <div class="column">
+                    <img src="img/iStock-1481622983.jpg" class="image" alt>
+                </div>
+                <div class="column">
+                    <h1 class="title is-2">Production mondiale d'énergie nucléaire</h1>
+                    <p class="is-size-5">
+                        L’énergie nucléaire – avec l’hydroélectricité – est l’une de nos plus anciennes technologies
+                        énergétiques à faible émission de carbone. La production d'énergie nucléaire existe depuis les
+                        années 1960, mais a connu une croissance massive à l'échelle mondiale dans les années 1970, 1980 et
+                        1990. Le graphique interactif montre l'évolution de la production nucléaire mondiale au cours du
+                        dernier demi-siècle. Après une croissance rapide dans les années 1970 à 1990,la production mondiale
+                        d’électricité a considérablement ralenti. En fait, nous avons constaté une forte baisse de la
+                        production nucléaire après le tsunami de Fukushima au Japon en 2011 [nous examinons les conséquences
+                        de cette catastrophe plus loin dans cet article] , les pays ayant mis hors service des centrales
+                        pour des raisons de sécurité. Mais nous constatons également que la production a à nouveau augmenté
+                        ces dernières années.
+                    </p>
+                </div>
+            </div>
+            <h2 class="title is-2 mt-6">Production d'électricité par sources d'énergies, de 1965 à 2023</h2>
+            <div class="container box" id="dataviz1">
+                <canvas id="chart1">
                 </canvas>
-                <p class="mt-2 mb-2">* Émissions de gaz à effet de serre mesurées en tonnes de CO2</p>
-                <div class="select" name="datasets">
-                    <select id="data-select-B">
-                        <option value="0">Infographie complète</option>
-                        <option value="1">Infographie simplifiée</option>
-                    </select>
+                <p class="mt-2 mb-2">* Production d'énergie mesurée enterawatts-heures</p>
+                <p>Sources : 
+                    <a href="https://ourworldindata.org/grapher/nuclear-energy-generation?tab=chart&country=~OWID_WRL">Nuclear power generation - Our World in Data</a>
+                    <a href="https://ourworldindata.org/grapher/modern-renewable-energy-consumption">Renewable electricity generation - Our World in Data </a>
+                    <a href="https://ourworldindata.org/grapher/modern-renewable-prod">Modern renewable energy generation by source - Our World in Data</a>
+                    <a href="https://ourworldindata.org/grapher/elec-fossil-nuclear-renewables">Electricity production from fossil fuels, nuclear and renewables - Our World in Data</a>
+                    <a href="https://ourworldindata.org/grapher/electricity-prod-source-stacked">Electricity production by source, World </a>
+                    <a href="https://visualizingenergy.org/world-electricity-generation-since-1900/">World electricity generation since 1900 - Visualizing Energy</a>
+                </p>
+            </div>
+            <div class="columns is-1 mt-6">
+                <p class="is-size-5">
+                    On constate en observant ce premier graphique que la production d’électricité à partir d’énergies
+                    fossiles et renouvelables n’a cessé d’augmenter au fil des années, tandis que la production
+                    d’électricité issue de l’énergie nucléaire stagne depuis maintenant plus de trente ans. On peut se
+                    demander si cette utilisation toujours plus conséquente d’énergie fossile comparée au nucléaire est
+                    justifiable d’un point de vue écologique et en terme de sûreté. Le graphique suivant aura ainsi pour
+                    objectif d’éclaircir cette question, en analysant la sûreté et la propreté des différentes énergies.
+                </p>
+            </div>
+            <h2 class="title is-2 mt-6">Les sources d'énergies les plus sûres et les plus propres</h2>
+            <div class="columns is-2 mt-6">
+                <div class="column mr-6 box" id="dataviz2">
+                    <h3 class="title is-3">Taux de mortalité</h3>
+                    <canvas id="chart2A">
+                    </canvas>
+                    <p class="mt-2 mb-2">* Nombre de morts estimé pour la production d'un térawattheure</p>
+                    <div class="select" name="datasets">
+                        <select id="data-select-A">
+                            <option value="0">Infographie complète</option>
+                            <option value="1">Infographie simplifiée</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="column box" id="dataviz3">
+                    <h3 class="title is-3">Emissions de gaz à effet de serre</h3>
+                    <canvas id="chart2B">
+                    </canvas>
+                    <p class="mt-2 mb-2">* Émissions de gaz à effet de serre mesurées en tonnes de CO2</p>
+                    <div class="select" name="datasets">
+                        <select id="data-select-B">
+                            <option value="0">Infographie complète</option>
+                            <option value="1">Infographie simplifiée</option>
+                        </select>
+                    </div>
                 </div>
             </div>
         </div>
+        <div class="column"></div>
     </main>
     <footer class="footer">
         <div class="content has-text-centered">
