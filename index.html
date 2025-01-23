@@ -23,22 +23,19 @@
                 </span>
             </div>
             <div class="navbar-end">
-                <a href="#text" class="button is-light">Énergie
-                    nucléaire</a>
-                <a href="#dataviz1" class="button is-light">Production
-                    d'électricité</a>
-                <a href="#dataviz2" class="button is-light">Sûreté et
-                    propreté</a>
-                <a href="#poster" class="button is-light">Émissions de GES</a>
+                <a href="#text" class="button is-light">Énergie nucléaire</a>
+                <a href="#dataviz1" class="button is-light">Production d'électricité</a>
+                <a href="#dataviz2" class="button is-light">Sûreté et propreté</a>
+                <a href="#poster" class="button is-light">Poster</a>
             </div>
         </nav>
     </header>
     <main class="columns">
         <div class="column"></div>
         <div class="column is-two-thirds">
-            <h1 class="title is-1" id="text">La production d'énergie nucléaire dans le monde</h1>
+            <h1 class="title is-1 has-text-centered" id="text">L'énergie nucléaire</h1>
 
-            <div class="columns is-1">
+            <div class="columns is-1 mt-6">
                 <p class="is-size-5">
                     Alors que le monde tente de faire évoluer ses systèmes énergétiques en abandonnant les combustibles fossiles au profit de sources d’énergie à faible émission de carbone, nous disposons d’un éventail d’options énergétiques : les technologies d’énergies renouvelables telles que l’hydroélectricité, l’éolien et le solaire, ainsi que l’énergie nucléaire. L’énergie nucléaire et les technologies renouvelables émettent généralement très peu de CO2 par unité de production d’énergie et sont également bien plus efficaces que les combustibles fossiles pour limiter la pollution atmosphérique locale.
                     <br><br>
@@ -48,41 +45,30 @@
                 </p>
             </div>
 
-            <h2 class="title is-2">Production d'électricité par sources d'énergies, de 1965 à 2023</h2>
+            <h2 class="title is-2 mt-6">La production d'énergie nucléaire dans le monde</h2>
             <div class="container box" id="dataviz1">
-                <canvas id="chart1">
-                </canvas>
+                <h3 class="title is-4">Production d'électricité par sources d'énergies, de 1965 à 2023</h3>
+                <canvas id="chart1"></canvas>
                 <p class="mt-2 mb-2">* Production d'énergie mesurée en terawattheure</p>
                 <p class="is-size-7">Sources :
-                    <a href="https://ourworldindata.org/grapher/nuclear-energy-generation?tab=chart&country=~OWID_WRL">Nuclear
-                        power generation - Our World in Data</a> ||
-                    <a href="https://ourworldindata.org/grapher/modern-renewable-energy-consumption">Renewable
-                        electricity generation - Our World in Data </a> ||
-                    <a href="https://ourworldindata.org/grapher/modern-renewable-prod">Modern renewable energy
-                        generation by source - Our World in Data</a> ||
-                    <a href="https://ourworldindata.org/grapher/elec-fossil-nuclear-renewables">Electricity production
-                        from fossil fuels, nuclear and renewables - Our World in Data</a> ||
-                    <a href="https://ourworldindata.org/grapher/electricity-prod-source-stacked">Electricity production
-                        by source, World </a> ||
-                    <a href="https://visualizingenergy.org/world-electricity-generation-since-1900/">World electricity
-                        generation since 1900 - Visualizing Energy</a>
+                    <a href="https://ourworldindata.org/grapher/nuclear-energy-generation?tab=chart&country=~OWID_WRL">Nuclear power generation - Our World in Data</a> ||
+                    <a href="https://ourworldindata.org/grapher/modern-renewable-energy-consumption">Renewable electricity generation - Our World in Data </a> ||
+                    <a href="https://ourworldindata.org/grapher/modern-renewable-prod">Modern renewable energy generation by source - Our World in Data</a> ||
+                    <a href="https://ourworldindata.org/grapher/elec-fossil-nuclear-renewables">Electricity production from fossil fuels, nuclear and renewables - Our World in Data</a> ||
+                    <a href="https://ourworldindata.org/grapher/electricity-prod-source-stacked">Electricity production by source, World </a> ||
+                    <a href="https://visualizingenergy.org/world-electricity-generation-since-1900/">World electricity generation since 1900 - Visualizing Energy</a>
                 </p>
             </div>
             <div class="columns is-1">
                 <p class="is-size-5">
-                    On constate en observant ce premier graphique que la production d’électricité à partir d’énergies
-                    fossiles et renouvelables n’a cessé d’augmenter au fil des années, tandis que la production
-                    d’électricité issue de l’énergie nucléaire stagne depuis maintenant plus de trente ans. On peut se
-                    demander si cette utilisation toujours plus conséquente d’énergie fossile comparée au nucléaire est
-                    justifiable d’un point de vue écologique et en terme de sûreté. Le graphique suivant aura ainsi pour
-                    objectif d’éclaircir cette question, en analysant la sûreté et la propreté des différentes énergies.
+                    Sur ce premier graphe, on observe que la production d’électricité à partir d’énergies fossiles et renouvelables n’a cessé d’augmenter au fil des années, tandis que la production d’électricité issue de l’énergie nucléaire semble stagner depuis maintenant plus de trente ans.
                 </p>
             </div>
 
-            <h2 class="title is-2">Le nucléaire parmi les sources d'énergies les plus sûres et les plus propres</h2>
-            <div class="columns is-2">
+            <h2 class="title is-2 mt-6">Le nucléaire parmi les sources d'énergies les plus sûres et les plus propres</h2>
+            <div class="columns is-2 mt-2">
                 <div class="column box" id="dataviz2">
-                    <h3 class="title is-3">Taux de mortalité</h3>
+                    <h3 class="title is-4 has-text-centered">Taux de mortalité</h3>
                     <canvas id="chart2A"></canvas>
                     <p class="mt-2 mb-2">* Nombre de morts estimé pour la production d'un térawattheure</p>
                     <p class="is-size-7">Sources :
@@ -98,7 +84,7 @@
                 </div>
                 <div class="column is-1"></div>
                 <div class="column box" id="dataviz3">
-                    <h3 class="title is-3">Emissions de gaz à effet de serre</h3>
+                    <h3 class="title is-4 has-text-centered">Emissions de gaz à effet de serre</h3>
                     <canvas id="chart2B"></canvas>
                     <p class="mt-2 mb-2">* Émissions de gaz à effet de serre mesurées en tonnes de CO2</p>
                     <p class="is-size-7">Sources :
@@ -115,17 +101,17 @@
             </div>
             <div class="columns is-1">
                 <p class="is-size-5">
-                    On constate en observant ce premier graphique que la production d’électricité à partir d’énergies
-                    fossiles et renouvelables n’a cessé d’augmenter au fil des années, tandis que la production
-                    d’électricité issue de l’énergie nucléaire stagne depuis maintenant plus de trente ans. On peut se
-                    demander si cette utilisation toujours plus conséquente d’énergie fossile comparée au nucléaire est
-                    justifiable d’un point de vue écologique et en terme de sûreté. Le graphique suivant aura ainsi pour
-                    objectif d’éclaircir cette question, en analysant la sûreté et la propreté des différentes énergies.
+                    En observant ces deux graphes, on constate que le nucléaire arrive à se placer parmi les énergies les plus sûres et les plus propres, malgré le bilan des plus grandes catastrophes dans ce milieu, incluant l'accident de Tchernobyl en 1986 et celui de Fukushima en 2011.
                 </p>
             </div>
-            <h3 class="title is-3">Le poster</h3>
-            <div class="container is-3" id="poster">
-                <img src="img/postermockup.jpg" alt="Poster comparant les émissions de gaz à effet de serre par sources d'énergies">
+            <h3 class="title is-3 mt-6">Le poster</h3>
+            <div class="container is-3" id="poster-container">
+                <img src="img/poster.png" id="poster" alt="Poster comparant les émissions de gaz à effet de serre par sources d'énergies">
+            </div>
+            <div class="columns is-1 mt-2">
+                <p class="is-size-5">
+                    Ce poster a été réalisé à partir du même dataset que celui des deux graphes précédent, afin de montrer la grande différence de quantité de CO2 émise dans l'atmosphère par le nucléaire en comparaison des sources d'énergies fossiles et renouvelables.
+                </p>
             </div>
         </div>
         <div class="column"></div>
@@ -133,12 +119,10 @@
     <footer class="footer">
         <div class="content has-text-centered">
             <p>
-                Données issues de <a href="https://ourworldindata.org" target="_blank">Our World in Data</a> et <a
-                    href="https://visualizingenergy.org/" target="_blank">Visualizing Energy</a>.
+                Données issues de <a href="https://ourworldindata.org" target="_blank">Our World in Data</a> et <a href="https://visualizingenergy.org/" target="_blank">Visualizing Energy</a>.
             </p>
             <p>
-                Réalisé avec <a href="https://www.chartjs.org" target="_blank">Chart.js</a> dans le cadre de la SAÉ 303
-                - MMI.
+                Réalisé avec <a href="https://www.chartjs.org" target="_blank">Chart.js</a> dans le cadre de la SAÉ 303 - MMI.
             </p>
             <p>
                 Projet réalisé par Lény Guyomard, Samuel Person et Antonin Thomas.

@@ -8,4 +8,13 @@
 
 #dataviz3 {
   width: 40%;
+}
+
+#poster-container {
+  display: flex;
+  justify-content: center;
+}
+
+#poster {
+  width: 40%;
 }/*# sourceMappingURL=style.css.map */
